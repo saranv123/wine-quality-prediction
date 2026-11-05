@@ -86,11 +86,11 @@ The following values are the results recorded in the original notebook.
 | Model | Accuracy | Quadratic weighted kappa | \(R^2\) |
 |---|---:|---:|---:|
 | Logistic Regression | 0.54 | 0.43 | — |
-| Random Forest Classifier | See notebook output | See notebook output | — |
-| SVM (RBF) | See notebook output | See notebook output | — |
-| Gradient Boosting Classifier | See notebook output | See notebook output | — |
-| Ridge Regression | See notebook output | See notebook output | See notebook output |
-| KNN Regression | See notebook output | See notebook output | See notebook output |
+| Random Forest Classifier | 0.66 | 0.65 | — |
+| SVM (RBF) | 0.67 | 0.56 | — |
+| Gradient Boosting Classifier | 0.60 | 0.56 | — |
+| Ridge Regression | 0.53 | 0.41 | 0.31 |
+| KNN Regression | 0.54 | 0.49 | 0.39 |
 | Random Forest Regression | **0.67** | **0.66** | **0.53** |
 
 The notebook contains the individual test-set evaluation outputs for all models. Random Forest Regression was the best-performing model in the original experiment according to the reported combination of metrics.
@@ -110,26 +110,6 @@ A `DummyClassifier` using the most-frequent strategy and a `DummyRegressor` usin
 ## Running the notebook
 
 Python 3.10 or newer is recommended.
-
-```bash
-python -m venv .venv
-```
-
-Activate the environment:
-
-```bash
-# Windows
-.venv\\Scripts\\activate
-
-# macOS / Linux
-source .venv/bin/activate
-```
-
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
 
 Download and extract the UCI dataset into `wine+quality/`, then launch Jupyter:
 
